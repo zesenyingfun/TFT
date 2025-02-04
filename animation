@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fighting Animation</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #f0f0f0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .arena {
+      position: relative;
+      width: 600px;
+      height: 300px;
+      background-color: #d4edda;
+      border: 5px solid #333;
+      border-radius: 10px;
+    }
+
+    .fighter {
+      position: absolute;
+      width: 50px;
+      height: 100px;
+    }
+
+    .fighter .head {
+      width: 30px;
+      height: 30px;
+      background-color: #ffcc99;
+      border-radius: 50%;
+      margin: 0 auto;
+    }
+
+    .fighter .body {
+      width: 10px;
+      height: 50px;
+      background-color: #333;
+      margin: 0 auto;
+    }
+
+    .fighter .arm {
+      width: 40px;
+      height: 5px;
+      background-color: #333;
+      position: absolute;
+      top: 35px;
+    }
+
+    .fighter .left-arm {
+      left: -30px;
+    }
+
+    .fighter .right-arm {
+      right: -30px;
+    }
+
+    .fighter .leg {
+      width: 10px;
+      height: 40px;
+      background-color: #333;
+      position: absolute;
+      bottom: 0;
+    }
+
+    .fighter .left-leg {
+      left: 5px;
+    }
+
+    .fighter .right-leg {
+      right: 5px;
+    }
+
+    @keyframes fight {
+      0% { transform: translateX(0); }
+      50% { transform: translateX(250px); }
+      100% { transform: translateX(0); }
+    }
+
+    @keyframes fight-reverse {
+      0% { transform: translateX(0); }
+      50% { transform: translateX(-250px); }
+      100% { transform: translateX(0); }
+    }
+
+    .fighter1 {
+      left: 50px;
+      animation: fight 2s infinite ease-in-out;
+    }
+
+    .fighter2 {
+      right: 50px;
+      animation: fight-reverse 2s infinite ease-in-out;
+    }
+  </style>
+</head>
+<body>
+  <div class="arena">
+    <div class="fighter fighter1">
+      <div class="head"></div>
+      <div class="body"></div>
+      <div class="arm left-arm"></div>
+      <div class="arm right-arm"></div>
+      <div class="leg left-leg"></div>
+      <div class="leg right-leg"></div>
+    </div>
+    <div class="fighter fighter2">
+      <div class="head"></div>
+      <div class="body"></div>
+      <div class="arm left-arm"></div>
+      <div class="arm right-arm"></div>
+      <div class="leg left-leg"></div>
+      <div class="leg right-leg"></div>
+    </div>
+  </div>
+</body>
+</html>
