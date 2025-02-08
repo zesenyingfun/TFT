@@ -18,9 +18,18 @@
 
     .arena {
       position: relative;
+      width: 300px;
+      height: 300px;
+      background-color: #ebf3ed;
+      border: 5px solid #333;
+      border-radius: 10px;
+    }
+
+    .arena2 {
+      position: relative;
       width: 600px;
       height: 300px;
-      background-color: #d4edda;
+      background-color: #ebf3ed;
       border: 5px solid #333;
       border-radius: 10px;
     }
@@ -30,13 +39,23 @@
       width: 50px;
       height: 100px;
     }
-
     .fighter .head {
       width: 30px;
       height: 30px;
       background-color: #ffcc99;
       border-radius: 50%;
       margin: 0 auto;
+      background-image: url('data/champion/Ekko.png');
+      background-size: cover;
+    }
+    .fighter .head2 {
+      width: 30px;
+      height: 30px;
+      background-color: #ffcc99;
+      border-radius: 50%;
+      margin: 0 auto;
+      background-image: url('data/champion/Garen.png');
+      background-size: cover;
     }
 
     .fighter .body {
@@ -51,7 +70,7 @@
       height: 5px;
       background-color: #333;
       position: absolute;
-      top: 35px;
+      top: 10px;
     }
 
     .fighter .left-arm {
@@ -80,23 +99,23 @@
 
     @keyframes fight {
       0% { transform: translateX(0); }
-      50% { transform: translateX(250px); }
+      50% { transform: translateX(50px); }
       100% { transform: translateX(0); }
     }
 
     @keyframes fight-reverse {
       0% { transform: translateX(0); }
-      50% { transform: translateX(-250px); }
+      50% { transform: translateX(-50px); }
       100% { transform: translateX(0); }
     }
 
     .fighter1 {
-      left: 50px;
+      left: 0px;
       animation: fight 2s infinite ease-in-out;
     }
 
     .fighter2 {
-      right: 50px;
+      right: 0px;
       animation: fight-reverse 2s infinite ease-in-out;
     }
   </style>
@@ -112,7 +131,7 @@
       <div class="leg right-leg"></div>
     </div>
     <div class="fighter fighter2">
-      <div class="head"></div>
+      <div class="head2"></div>
       <div class="body"></div>
       <div class="arm left-arm"></div>
       <div class="arm right-arm"></div>
