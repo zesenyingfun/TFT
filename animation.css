@@ -37,7 +37,13 @@ body {
     0% {
         transform: translateX(0) scaleX(1);
     }
+    25% {
+        transform: translateX(20px) scaleX(1.1);
+    }
     50% {
+        transform: translateX(0) scaleX(1);
+    }
+    75% {
         transform: translateX(20px) scaleX(1.1);
     }
     100% {
@@ -49,7 +55,13 @@ body {
     0% {
         transform: translateX(0) scaleX(1);
     }
+    25% {
+        transform: translateX(-20px) scaleX(1.1);
+    }
     50% {
+        transform: translateX(0) scaleX(1);
+    }
+    75% {
         transform: translateX(-20px) scaleX(1.1);
     }
     100% {
